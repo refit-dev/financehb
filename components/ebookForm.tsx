@@ -3,7 +3,7 @@ import { Loader2} from 'lucide-react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import React, { useState, useTransition} from 'react'
-import { sendEmail } from '@/actions/mail'
+import { saveSmartmailing, sendEmail } from '@/actions/mail'
 import toast from 'react-hot-toast';
 import { Ebook } from '@/types';
 import { PortableText } from "next-sanity";
@@ -16,6 +16,7 @@ import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
 export default function EbookForm({ ebook }: { ebook: Ebook }) {
     const [isPending, startTransition] = useTransition();
+    const [isPending2, startTransition2] = useTransition();
     const [form, setForm] = useState({
         email: "",
         name: "",
@@ -29,6 +30,9 @@ export default function EbookForm({ ebook }: { ebook: Ebook }) {
 
     };
     const {executeRecaptcha} = useGoogleReCaptcha()
+
+   
+
     const handleSendEmail = (formData: FormData) => {
         startTransition(async () => {
             const loadingToast = toast.loading("Probíhá ověření");
@@ -36,6 +40,7 @@ export default function EbookForm({ ebook }: { ebook: Ebook }) {
       toast.error("reCAPTCHA není připravena, zkuste to znovu.");
       return;
     }
+
    
             const token = await executeRecaptcha();
   
@@ -104,12 +109,14 @@ export default function EbookForm({ ebook }: { ebook: Ebook }) {
             <Button type="submit"  variant={"default"} className='mx-auto'>
                 {isPending ? <Loader2 className='animate-spin' /> : <>Odeslat </>}
             </Button>
+            
         </form>
         </div>
                 <span className="font-light text-lg text-center">Přihlášením k odběru souhlasíte se zpracováním osobních údajů. Více informací <Link href='/ochrana-osobnich-udaju' className="underline font-semibold decoration-secondary-background" target="_blank">ZDE </Link> </span>
                 
                 </div>
             </section>
+            
         </main>
     )
 }

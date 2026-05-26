@@ -3,6 +3,60 @@
 import {createTransport } from "nodemailer"
 import { verifyCaptchaToken } from "./captcha";
 
+export async function saveSmartmailing(email: string, name: string, surname: string, contactlist_id: number){
+    try{
+        let contactListFound = false
+    const auth =btoa(String(process.env.SMARTMAILNG_USERNAME! + ":" + process.env.SMARTMAILNG_PASS!))
+    console.log(auth)
+    //https://app.smartemailing.cz/api/v3/contactlists
+    const smartMailingRes = await fetch(`https://app.smartemailing.cz/api/v3/contacts/${email}`, {
+        method: "GET",
+        headers: {
+            Authorization: `Basic ${auth}`
+        }
+    })
+    const json = await smartMailingRes.json()
+    console.log("Status: ",json.status)
+    if(json.status === "error"){
+     const addUser = await fetch('https://app.smartemailing.cz/api/v3/import', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Basic ${auth}`
+            },
+            body: JSON.stringify({
+                settings: {
+                    update: true,
+                    add_namedays: true,
+                    add_genders: true,
+                    add_salutions: true,
+                    preserve_unsubscribed: true,
+                    skip_invalid_emails: false
+                },
+                data: [
+                    {
+                        emailaddress: email,
+                        name: name,
+                        surname: surname,
+                        contactlists: [
+                        {
+                            id: contactlist_id,
+                            status: 'confirmed'
+                        }
+                        ],
+                    }
+                ]
+                })
+            })
+        const json = await addUser.json()
+        console.log(json.status)
+    }
+    
+    }catch(error){
+        console.log(error)
+    }
+}
+
 export async function sendNewsletter(formData: FormData){
   
     const  jmeno = formData.get("name") as string;
@@ -36,7 +90,7 @@ export async function sendNewsletter(formData: FormData){
                             Měsíční aktuality z KPT!
                         </p>
                         <p style="text-align: center;">
-                            <a href="${"link"}" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 12px 20px; background-color: #C2B067; color: #ffffff; text-decoration: none; border-radius: 5px; font-weight: bold;">Download eBook</a>
+                            <a href="${"link"}" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 12px 20px; background-color: #C2B067; color: #ffffff; text-decoration: none; border-radius: 5px; font-weight: bold;">Stáhnout eBook</a>
                         </p>
                         <p style="margin: 20px 0 20px 0; font-size: 16px; line-height: 24px; color: #0A1a49; text-align: center;">
                             Preview and highlights of your eBook:
@@ -126,6 +180,8 @@ attachments:
     }),
     
 });
+const smartmailing = await saveSmartmailing(email, jmeno, "x", 43)
+console.log("Smartmailing:", smartmailing)
 }catch(error){
   console.log(error);
 }
@@ -292,7 +348,8 @@ if(type === "Ebook"){
         tags: ["Stazeny eBook Financehb.cz"],
       })
     });
-    
+    const smartmailing = await saveSmartmailing(email, jmeno, prijmeni, 107)
+    console.log("Smartmailing:", smartmailing)
   }
 
   return{

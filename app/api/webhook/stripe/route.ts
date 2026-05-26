@@ -5,6 +5,7 @@ import { FullUser, RaynetResponse } from "@/types";
 import { createInvoice } from "@/actions/users";
 import { createTransport } from "nodemailer";
 import { turso } from "@/database/client";
+import { saveSmartmailing } from "@/actions/mail";
 
 export async function POST(req: Request) {
   const body = await req.text();
@@ -169,6 +170,9 @@ export async function POST(req: Request) {
               return new Response("DB error", { status: 500 });
             }
 
+            const smartmailing = await saveSmartmailing(user.email, user.first_name, user.last_name, 35)
+
+            console.log("Smartmailing:", smartmailing)
             await transporter.sendMail({
               from: process.env.FROM_EMAIL,
               to: process.env.FROM_EMAIL,
