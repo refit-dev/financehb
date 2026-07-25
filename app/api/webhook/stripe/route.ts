@@ -80,7 +80,7 @@ export async function POST(req: Request) {
             subscription.latest_invoice as string
           );
 
-             const discount = session.total_details?.amount_discount ?? 0;
+          const discount = session.total_details?.amount_discount ?? 0;
           const total = invoice.amount_due + discount / 100;
           const discountPer = (discount / (total / 100))/100;
 
@@ -100,7 +100,7 @@ export async function POST(req: Request) {
           }
           console.log("Raynet id:", user.raynet_id, ", typ:",typeof user.raynet_id)
           // 🧠 Raynet insert (jen pokud není ID)
-          if (user.raynet_id === null || String(user.raynet_id) === "") {
+          if (user.raynet_id === null || String(user.raynet_id) === "" || user.raynet_id === 0.0 || user.raynet_id === 0) {
             console.log("🟡 Raynet: Creating new company record...");
             const raynet = await fetch(raynetAPIUrl, {
               method: "PUT",
