@@ -59,8 +59,8 @@ export async function saveSmartmailing(email: string, name: string, surname: str
 
 export async function sendNewsletter(formData: FormData){
   
-    const  jmeno = formData.get("name") as string;
-     const email = formData.get("email") as string;
+const  jmeno = formData.get("name") as string;
+  const email = formData.get("email") as string;
   const raynetAPIUrl = "https://app.raynet.cz/api/v2/company/";
   const transporter = createTransport({
     service: "gmail",
@@ -359,3 +359,49 @@ if(type === "Ebook"){
         console.log(error);
       }
     }
+
+export async function saveRaynet(jmeno: string, email: string){
+    const raynetAPIUrl = "https://app.raynet.cz/api/v2/company/";
+    await fetch(raynetAPIUrl, {
+    method: "PUT",
+    headers: {
+        "Content-Type": "application/json",
+        Authorization: "Basic " + Buffer.from(process.env.RAYNET_EMAIL + ":" + process.env.RAYNET_API_KEY).toString("base64"),
+        "X-Instance-Name": "financehb",
+    },
+    body: JSON.stringify({
+        name: jmeno,
+        rating: "A",
+        state: "A_POTENTIAL",
+        role: "A_SUBSCRIBER",
+        addresses: [
+          {
+              address: {
+                  name: "Sídlo klienta",
+                  street: "",
+                  city: "",
+                  province: "",
+                  zipCode: "",
+                  country: "CZ",
+                  lat: 0,
+                  lng: 0
+              },
+          contactInfo: {
+              email: email,
+              email2: "",
+              fax: "",
+              otherContact: "",
+              tel1: "",
+              tel1Type: "",
+              tel2: "",
+              tel2Type: "",
+              www: "",
+              doNotSendMM: false
+              },
+          }
+          ],
+        tags: ["Mesicni akt z KPT VZOR zdarma"],
+    }),
+    
+});
+}

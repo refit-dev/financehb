@@ -7,6 +7,7 @@ import { motion } from "framer-motion"
 import { Button } from "./ui/button"
 import Link from "next/link"
 import { FullUser } from "@/types"
+import { saveRaynet } from "@/actions/mail"
 export default function Subscription({subs, user}:{subs: Subscriptions[], user: FullUser | undefined | null}){
     const [isWide, setIsWide] = useState(false);
 
@@ -63,11 +64,27 @@ export default function Subscription({subs, user}:{subs: Subscriptions[], user: 
         </div>
                         
         <div className='w-fit'>
-       <Link target="_blank"  href={"/api/downloadPdf"} download={"Finance HB - PDF"}>
+       {user ? <Link 
+       target="_blank"  
+       href={"/api/downloadPdf"} 
+       download={"Finance HB - PDF"}
+       onClick={async () => {
+        if(user && (user.raynet_id === 0 || user.raynet_id === 0.0 || typeof user.raynet_id === undefined) ){
+          await saveRaynet(user.first_name + " " + user.last_name, user.email);
+        }else{
+          console.log("user má raynet")
+        }
+       }}
+       >
         <Button variant={"default"} size={"lg"} className='font-medium text-lg'>
             Stáhnout PDF
             </Button>
-            </Link> 
+            </Link> : 
+            <Link href={"/log-in"}>
+        <Button variant={"default"} size={"lg"} className='font-medium text-lg'>
+            Přihlásit se
+            </Button>
+            </Link> }
             </div>
     </motion.div>
                 </div>
