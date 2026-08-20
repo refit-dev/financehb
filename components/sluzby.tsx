@@ -80,12 +80,6 @@ const services = [
     description: "Odběratel může využít možnosti získat všeobecné informace týkající se oblasti úvěrů."
   },
   {
-
-    link:"investOdb",
-    title: "Obecná konzultace s investičními odborníky",
-    description: "Odběratel může využít možnosti získat všeobecné informace týkající se oblasti investic."
-  },
-  {
     link:"privacy",
     title: "Obecná konzultace s finančními odborníky pro soukromé účely",
     description: "Odběratel může využít možnosti získat všeobecné informace týkající se různých oblastí finančního trhu – pojištění, úvěry, hypotéky, poradenství v oblasti výnosnosti investičních nemovitostí apod."
@@ -222,7 +216,6 @@ const services = [
     { name: "Krizový plán pro rodinu", info: "krizPlan",basic: false, pro: false, enterprise: true },
     { name: "Obecná konzultace pojišťovacími odborníky", info: "pojOdb",basic: false, pro: false, enterprise: true },
     { name: "Obecná konzultace úvěrovými odborníky", info: "uvery",basic: false, pro: true, enterprise: true },
-    { name: "Obecná konzultace investičními odborníky", info: "investOdb",basic: false, pro: true, enterprise: true },
     { name: "Obecná konzultace s finančními odborníky pro soukromé účely", info: "privacy",basic: false, pro: true, enterprise: true },
     { name: "Poradce na telefonu ", info: "foun",basic: false, pro: true, enterprise: true },
     { name: "Přednostní odbavení", info: "odbaveni",basic: false, pro: true, enterprise: true },
@@ -301,7 +294,7 @@ const services = [
 
       <li><span className="font-bold">Měsíční aktuality z trhu</span> a přehled novinek bez složitého hledání</li> 
 
-      <li><span className="font-bold">Snížení poplatků u investic </span></li>
+      <li><span className="font-bold">Poplatky na společnost Financehb Services s.r.o.  </span></li>
 
       <li><span className="font-bold">Online archivaci smluv, </span>přístup k přehledné majetkové tabulce a hlídání klíčových termínů</li> 
 
