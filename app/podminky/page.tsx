@@ -1,32 +1,137 @@
-"use client";
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import React from 'react'
 
+export const metadata: Metadata = {
+    title: "Podmínky | Finance HB",
+    description: "Regulatorní a právní informace k finančním službám nabízeným na webu financehb.cz – zprostředkovatel, rozsah oprávnění evidovaných ČNB a údaje o společnostech.",
+}
+
+type Company = {
+    name: string
+    role: string
+    rows: { label: string; value: string }[]
+}
+
+const companies: Company[] = [
+    {
+        name: "Financehb Services s.r.o.",
+        role: "Poskytovatel servisního poradenství (placené služby webu)",
+        rows: [
+            { label: "Právní forma", value: "Společnost s ručením omezeným" },
+            { label: "IČO", value: "29698022" },
+            { label: "Sídlo", value: "Nad Žlábkem 3758, 580 01 Havlíčkův Brod" },
+            { label: "Spisová značka", value: "C 57025 vedená u Krajského soudu v Hradci Králové" },
+            { label: "Vznik", value: "18. června 2026" },
+        ],
+    },
+    {
+        name: "EFEKTA Brokerpool a.s.",
+        role: "Zastoupený subjekt – samostatný zprostředkovatel",
+        rows: [
+            { label: "Právní forma", value: "Akciová společnost" },
+            { label: "IČO", value: "29048770" },
+            { label: "Sídlo", value: "Radlická 365/154, Radlice, 158 00 Praha 5" },
+            { label: "Spisová značka", value: "B 20978 vedená u Městského soudu v Praze" },
+            { label: "Vznik", value: "8. března 2010" },
+        ],
+    },
+]
+
 export default function PodminkyPage() {
     return (
-        <main className="flex 2xl:py-28 flex-col items-center p-8 text-xl space-y-3">
-            <h1 className='text-2xl'>
-                Finanční služby propagované a nabízené na tomto webu poskytuje společnost Financehb Services s.r.o, IČO: 29698022, a zde uvedení poradci jako fyzické osoby: Petr Krajcigr, kteří jsou v oblasti:
-            </h1>
-            <hr className='w-full border-secondary border-[1.5px]' />
-            <ul className='list-disc px-4'>
-                <li>pojištění registrovaní podle zákona č. 170/2018 Sb. jako vázaní zástupci samostatného zprostředkovatele pojištění,</li>
-                <li>doplňkového penzijního spoření podle zákona č. 256/2004 Sb. jako vázaní zástupci investičního zprostředkovatele,</li>
-                <li>spotřebitelských úvěrů podle zákona č. 257/2016 Sb. jako vázaní zástupci samostatného zprostředkovatele spotřebitelského úvěru,
-                    společnosti EFEKTA Brokerpool a.s. Základní údaje o firmě 
-                    <ul className='list-disc px-4'>
-                        <li>
-                            Forma: Akciová společnost
-                        </li>
-                        <li>Sídlo. Radlická 365/154, 158 00 Praha 5 - Radlice</li>
-                        <li>Vznik: 8. března 2010</li>
-                        <li>Spisová značka: B 20978 vedená u Městského soudu v Praze</li>
-                        <li>IČO: 29048770</li>
-                        <li>DIČ: CZ29048770</li>
-                    </ul>
-                    Tuto skutečnost je možné ověřit v Seznamu regulovaných a registrovaných subjektů finančního trhu České národní banky na <Link className='underline hover:text-secondary-foreground visited:text-secondary-foreground' href={"http://www.cnb.cz/cnb/jerrs"}>http://www.cnb.cz/cnb/jerrs</Link>, kde také najdete aktuální podrobnosti o registraci a jejím rozsahu.</li>
-            </ul>
+        <main className="mx-auto max-w-5xl px-6 py-14 2xl:py-28 space-y-14 text-secondary">
+            <header className="space-y-3">
+                <h1 className="text-4xl font-medium underline underline-offset-8 decoration-secondary-background">
+                    Podmínky
+                </h1>
+                <p className="text-lg font-light">
+                    Regulatorní a právní informace k finančním službám propagovaným a nabízeným na webu www.financehb.cz.
+                </p>
+            </header>
+
+            <section className="space-y-4">
+                <h2 className="text-2xl font-medium">1. Kdo služby na tomto webu zprostředkovává</h2>
+                <hr className="border-secondary border-[1.5px]" />
+                <p className="text-xl leading-relaxed">
+                    Finanční služby propagované a nabízené na tomto webu jsou v příslušném rozsahu zprostředkovávány
+                    společností <strong className="font-medium">Financehb.cz Service s.r.o.</strong>, IČO 29698022,
+                    a jejími oprávněnými pracovníky.
+                </p>
+            </section>
+
+            <section className="space-y-4">
+                <h2 className="text-2xl font-medium">2. Rozsah regulované činnosti</h2>
+                <hr className="border-secondary border-[1.5px]" />
+                <p className="text-xl leading-relaxed">
+                    <strong className="font-medium">Petr Krajcigr</strong> vykonává regulovanou činnost jako vázaný
+                    zástupce příslušného zastoupeného subjektu, zejména společnosti{" "}
+                    <strong className="font-medium">EFEKTA Brokerpool a.s.</strong>, a to výhradně v rozsahu oprávnění
+                    evidovaných Českou národní bankou.
+                </p>
+                <p className="text-xl leading-relaxed">
+                    Jedná se zejména o zprostředkování finančních produktů a služeb v oblasti:
+                </p>
+                <ul className="list-disc pl-6 space-y-3 text-lg font-light marker:text-secondary-background">
+                    <li>
+                        <span className="font-medium">pojištění</span> – jako vázaný zástupce samostatného
+                        zprostředkovatele pojištění registrovaný podle zákona č. 170/2018 Sb.,
+                    </li>
+                    <li>
+                        <span className="font-medium">doplňkového penzijního spoření</span> – jako vázaný zástupce
+                        investičního zprostředkovatele podle zákona č. 256/2004 Sb.,
+                    </li>
+                    <li>
+                        <span className="font-medium">spotřebitelských úvěrů</span> – jako vázaný zástupce samostatného
+                        zprostředkovatele spotřebitelského úvěru podle zákona č. 257/2016 Sb.
+                    </li>
+                </ul>
+                <p className="border-l-4 border-secondary-background bg-primary-foreground p-5 text-lg font-light leading-relaxed">
+                    Tuto skutečnost je možné ověřit v Seznamu regulovaných a registrovaných subjektů finančního trhu
+                    České národní banky na{" "}
+                    <Link
+                        href="https://www.cnb.cz/cnb/jerrs"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline underline-offset-4 decoration-secondary-background hover:text-secondary-foreground"
+                    >
+                        www.cnb.cz/cnb/jerrs
+                    </Link>
+                    , kde také najdete aktuální podrobnosti o registraci a jejím rozsahu.
+                </p>
+            </section>
+
+            <section className="space-y-4">
+                <h2 className="text-2xl font-medium">3. Údaje o společnostech</h2>
+                <hr className="border-secondary border-[1.5px]" />
+                <p className="text-lg font-light">
+                    Níže uvedené společnosti jsou samostatné právnické osoby s odlišnou rolí. Údaje se vztahují vždy
+                    pouze ke společnosti, pod kterou jsou uvedeny.
+                </p>
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    {companies.map((company) => (
+                        <article
+                            key={company.name}
+                            className="flex flex-col rounded-xl border border-secondary/15 bg-primary-foreground p-6 shadow-md"
+                        >
+                            <h3 className="text-xl font-medium">{company.name}</h3>
+                            <p className="mt-2 border-t-2 border-secondary-background pt-3 text-sm font-light">
+                                {company.role}
+                            </p>
+                            <dl className="mt-4 space-y-3 text-base font-light">
+                                {company.rows.map((row) => (
+                                    <div key={row.label} className="flex flex-col">
+                                        <dt className="text-xs uppercase tracking-wider text-secondary/60">
+                                            {row.label}
+                                        </dt>
+                                        <dd>{row.value}</dd>
+                                    </div>
+                                ))}
+                            </dl>
+                        </article>
+                    ))}
+                </div>
+            </section>
         </main>
     )
 }
-

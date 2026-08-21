@@ -72,7 +72,7 @@ export default  function MainPage(){
         <hr className="h-0.5 w-20 mt-4"/>
            <div className="flex flex-col text-white">
     <h3 className="text-xl font-bold">Zajištění pravidelného <span className="text-secondary-background">pasivního příjmu</span></h3>
-            <p className="font-extralight text-base ">Máte aktuálně větší obnos peněz a nechcete je nechat jen tak ležet v bance? Zajímá vás, jak to udělat, aby vám vaše peníze chytrou investicí přinášeli pravidelný pasivní příjem? Zprostředkuji Vám produkty do Vašeho portfolia, které vám pravidelně budou generovat zajímavé výnosy.</p>
+            <p className="font-extralight text-base ">Máte aktuálně větší obnos peněz a nechcete je nechat jen tak ležet v bance? Zajímá vás, jak to udělat, aby vám vaše peníze chytrou investicí přinášeli pravidelný pasivní příjem? Pomohu Vám zorientovat se v možnostech investování a zprostředkuji investiční produkty z nabídky spolupracujících poskytovatelů.</p>
            </div>
        
           </div>

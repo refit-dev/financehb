@@ -58,9 +58,9 @@ export default function Header(){
         </h1>
         <div className="flex flex-col">
             <p className="text-xl">
-                Jmenuji se Petr Krajcigr, zabývám se <br />
-                <span className="font-bold">finančním poradenstvím</span><br />
-                a <span className="font-bold">správě portfolií</span>.
+                Jmenuji se Petr Krajcigr a již více jak 30 let <br />
+                <span className="font-bold">pomáhám klientům</span> orientovat se<br />
+                ve světě <span className="font-bold">financí</span> a <span className="font-bold">investic</span>.
             </p>
         </div>
         <Link href={"/sluzby#calendly"} target="_blank">

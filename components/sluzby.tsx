@@ -48,24 +48,8 @@ const services = [
     description: "Odběrateli je v daném časovém horizontu předložen aktuální přehled stavu produktů a naspořených finančních prostředků ve srovnání s minulým obdobím."
   },
   {
-    link:"analyza",
-    title: "Analýza finančního portfolia",
-    description: "Poskytovatel asistuje Odběrateli při řešení otázek týkajících se jeho finančního portfolia. Za tímto účelem je Odběrateli předložen aktuální přehled stavu produktů v jeho finančním portfoliu. Odběratel je Poskytovatelem informován o aktuální situaci napříč finančním trhem a o předpokládaném dalším vývoji na finančním trhu, aby měl Odběratel možnost zvolit si optimální řešení. Na vyžádání je Odběratel Poskytovatelem v obecné rovině informován o aktuálních nabídkách dostupných na trhu."
-  },
-  {
-    link:"aktPpp",
-    title: "Aktualizace portfolia pojistných smluv",
-    description: "Poskytovatel asistuje Odběrateli při aktualizaci jeho portfolia pojistných smluv. Odběratel je Poskytovatelem informován o aktuální situaci na trhu, aby měl Odběratel možnost zvolit si optimální řešení. Obsahem této služby je také obecné informování o vývoji a možnostech na pojistném trhu za účelem zvyšování znalostí Odběratele, jeho finanční gramotnosti a orientace na pojistném trhu."
-  },
-  {
-    
-    link:"aktUv",
-    title: "Aktualizace portfolia úvěrů",
-    description: "Poskytovatel asistuje Odběrateli při aktualizaci jeho portfolia úvěrových smluv. Odběratel je Poskytovatelem informován o aktuální situaci na trhu, aby měl Odběratel možnost zvolit si optimální řešení. Obsahem této služby je také obecné informování o vývoji a možnostech na úvěrovém trhu za účelem zvyšování znalostí Odběratele, jeho finanční gramotnosti a orientace na úvěrovém trhu."
-  },
-  {
     link:"aktIn",
-    title: "Aktualizace portfolia investic",
+    title: "Přehled a aktualizace údajů o investičním portfoliu",
     description: "Poskytovatel asistuje Odběrateli při aktualizaci jeho portfolia investičních smluv. Odběratel je Poskytovatelem informován o aktuální situaci na trhu, aby měl Odběratel možnost zvolit si optimální řešení. Obsahem této služby je také pravidelné obecné informování o vývoji a možnostech na finančním trhu, příp. osvětové a metodické informace a materiály, to vše za účelem zvyšování znalostí a kompetencí a finanční gramotnosti Odběratele. Na vyžádání je Odběratel Poskytovatelem informován o aktuálních zvýhodněných nabídkách na trhu v obecné rovině."
   },
   {
@@ -207,10 +191,7 @@ const services = [
     { name: "Aktualizace finančního plánu dle potřeby", info: "dlePotreby",basic: false, pro: false, enterprise: true },
     { name: "Přehled změn finančního majetku", info: "finmat",basic: false, pro: true, enterprise: true },
     { name: "Přehled změn finančního majetku 1/4 rok", info: "14roku",basic: false, pro: false, enterprise: true },
-    { name: "Analýza finančního portfolia", info: "analyza",basic: false, pro: true, enterprise: true },
-    { name: "Aktualizace portfolia pojistných smluv ", info: "aktPpp",basic: false, pro: true, enterprise: true },
-    { name: "Aktualizace portfolia úvěrů", info: "aktUv",basic: false, pro: true, enterprise: true },
-    { name: "Aktualizace portfolia investic",info: "aktIn", basic: false, pro: true, enterprise: true },
+    { name: "Přehled a aktualizace údajů o investičním portfoliu",info: "aktIn", basic: false, pro: true, enterprise: true },
     { name: "Komplexní zpracování administrativy", info: "admin",basic: false, pro: false, enterprise: true },
     { name: "Hlášení pojistných událostí", info: "hlaseni",basic: false, pro: true, enterprise: true },
     { name: "Krizový plán pro rodinu", info: "krizPlan",basic: false, pro: false, enterprise: true },
@@ -278,16 +259,19 @@ const services = [
   ))}
     <div ref={text} className="bg-primary min-h-screen flex flex-col justify-center p-4 space-y-5" id="cenik">
     <h2 
-    className="underline underline-offset-4 decoration-secondary-background font-ibarra md:text-left font-bold tracking-wide  text-4xl ">Placené poradenství</h2>
+    className="underline underline-offset-4 decoration-secondary-background font-ibarra md:text-left font-bold tracking-wide  text-4xl ">Servisní poradenství</h2>
     <h3 
-    className=" font-ibarra md:text-left font-bold tracking-wide  text-xl">🔒 Dlouhodobá důvěra, profesionální péče o váš majetek </h3>
+    className=" font-ibarra md:text-left font-bold tracking-wide  text-xl">🏛️ Poskytovatelem této služby je společnost Financehb Services s.r.o. </h3>
+    <h4 
+    className=" font-ibarra md:text-left font-bold tracking-wide  text-xl">🔒 Dlouhodobá důvěra, profesionální péče o váš majetek </h4>
+    
     <p 
     
-    className="text-base  font-light text-justify md:text-left text-black">Díky mým dlouholetým zkušenostem klienti ví, že se na mě mohou spolehnout – i když sami nemají čas vše sledovat. Chtějí mít kontrolu nad svým majetkem, ale zároveň partnera, který sleduje změny, hlídá detaily a přichází s řešeními. Proto využívají placené poradenství, které jim poskytuje jistotu, klid a VIP přístup ke správě financí. 
+    className="text-base  font-light text-justify md:text-left text-black">Díky mým dlouholetým zkušenostem klienti ví, že se na mě mohou spolehnout – i když sami nemají čas vše sledovat. Chtějí mít kontrolu nad svým majetkem, ale zároveň partnera, který sleduje změny, hlídá detaily a přichází s řešeními. Proto využívají servisní poradenství, které jim poskytuje jistotu, klid a VIP klientský servis a dlouhodobá péče. 
 
     Ať už spravujete majetek do 1 milionu korun, nebo jste manažer či ředitel firmy s portfoliem v řádech milionů – mám pro vás řešení. </p>
     <h3 
-    className=" font-ibarra md:text-left font-bold tracking-wide  text-xl">🧩 Co získáte díky placenému poradenství? </h3>
+    className=" font-ibarra md:text-left font-bold tracking-wide  text-xl">🧩 Co získáte díky servisnímu poradenství? </h3>
     <ul className="list-disc mx-5 space-y-1">
       <li><span className="font-bold">Pravidelnou péči a kontrolu nad majetkem </span>– minimálně jednou ročně projdeme aktuální hodnotu a úpravy plánu </li>
       <li><span className="font-bold">Aktualizaci finančního plánu a konzultace zdarma</span></li> 
@@ -309,9 +293,9 @@ const services = [
       <li><span className="font-bold">Základní balíček</span> – ideální pro aktivní jednotlivce i rodiny </li>
       <li><span className="font-bold">Rozšířený servis </span>– pro náročnější klienty s vyšším objemem financí </li> 
 
-      <li><span className="font-bold">VIP správa</span> – pro ty, kteří chtějí plný komfort, individuální přístup a maximální efektivitu </li>    
+      <li><span className="font-bold">VIP servis</span> – pro ty, kteří chtějí plný komfort, individuální přístup a maximální efektivitu </li>    
     </ul>
-         <p>👉 Posuňte správu svého majetku na vyšší úroveň. Staňte se klientem s profesionální péčí, která šetří čas, peníze i starosti. 
+         <p>👉 Získejte dlouhodobý přehled o svých financích a profesionální klientský servis. Staňte se klientem s profesionální péčí, která šetří čas, peníze i starosti. 
 
  
 <br/>

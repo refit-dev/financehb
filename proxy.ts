@@ -4,7 +4,7 @@ import {
   updateUserSessionExpiration,
 } from "./database/session"
 import { turso } from "./database/client"
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const response = (await middlewareAuth(request)) ?? NextResponse.next()
   
   await updateUserSessionExpiration({
