@@ -261,7 +261,7 @@ const services = [
     <h2 
     className="underline underline-offset-4 decoration-secondary-background font-ibarra md:text-left font-bold tracking-wide  text-4xl ">Servisní poradenství</h2>
     <h3 
-    className=" font-ibarra md:text-left font-bold tracking-wide  text-xl">🏛️ Poskytovatelem této služby je společnost Financehb Services s.r.o. </h3>
+    className=" font-ibarra md:text-left font-bold tracking-wide  text-xl">🏛️ Poskytovatelem této služby je společnost Financehb.cz s.r.o. </h3>
     <h4 
     className=" font-ibarra md:text-left font-bold tracking-wide  text-xl">🔒 Dlouhodobá důvěra, profesionální péče o váš majetek </h4>
     
@@ -278,11 +278,9 @@ const services = [
 
       <li><span className="font-bold">Měsíční aktuality z trhu</span> a přehled novinek bez složitého hledání</li> 
 
-      <li><span className="font-bold">Poplatky na společnost Financehb Services s.r.o.  </span></li>
-
       <li><span className="font-bold">Online archivaci smluv, </span>přístup k přehledné majetkové tabulce a hlídání klíčových termínů</li> 
 
-      <li><span className="font-bold">Garanci odpovědi na vaše dotazy do druhého dne </span></li>
+      <li><span className="font-bold">Garanci odpovědi na vaše dotazy max. do druhého dne </span></li>
 
       <li><span className="font-bold">Hlášení pojistných událostí přes službu EUCS</span>, včetně právního servisu – bez stresu, bez zdržení </li>
       

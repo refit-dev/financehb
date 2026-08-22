@@ -15,11 +15,11 @@ type Company = {
 
 const companies: Company[] = [
     {
-        name: "Financehb Services s.r.o.",
+        name: "Financehb.cz s.r.o.",
         role: "Poskytovatel servisního poradenství (placené služby webu)",
         rows: [
             { label: "Právní forma", value: "Společnost s ručením omezeným" },
-            { label: "IČO", value: "29698022" },
+            { label: "IČO", value: "06752888" },
             { label: "Sídlo", value: "Nad Žlábkem 3758, 580 01 Havlíčkův Brod" },
             { label: "Spisová značka", value: "C 57025 vedená u Krajského soudu v Hradci Králové" },
             { label: "Vznik", value: "18. června 2026" },
@@ -55,7 +55,7 @@ export default function PodminkyPage() {
                 <hr className="border-secondary border-[1.5px]" />
                 <p className="text-xl leading-relaxed">
                     Finanční služby propagované a nabízené na tomto webu jsou v příslušném rozsahu zprostředkovávány
-                    společností <strong className="font-medium">Financehb.cz Service s.r.o.</strong>, IČO 29698022,
+                    společností <strong className="font-medium">Financehb.cz s.r.o.</strong>, IČO 06752888,
                     a jejími oprávněnými pracovníky.
                 </p>
             </section>
