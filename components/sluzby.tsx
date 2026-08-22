@@ -261,12 +261,11 @@ const services = [
     <h2 
     className="underline underline-offset-4 decoration-secondary-background font-ibarra md:text-left font-bold tracking-wide  text-4xl ">Servisní poradenství</h2>
     <h3 
-    className=" font-ibarra md:text-left font-bold tracking-wide  text-xl">🏛️ Poskytovatelem této služby je společnost Financehb.cz s.r.o. </h3>
+    className=" font-ibarra md:text-left font-bold tracking-wide  text-xl">🏛️ Poskytovatelem této služby je společnost Financehb Services s.r.o. </h3>
     <h4 
     className=" font-ibarra md:text-left font-bold tracking-wide  text-xl">🔒 Dlouhodobá důvěra, profesionální péče o váš majetek </h4>
     
     <p 
-    
     className="text-base  font-light text-justify md:text-left text-black">Díky mým dlouholetým zkušenostem klienti ví, že se na mě mohou spolehnout – i když sami nemají čas vše sledovat. Chtějí mít kontrolu nad svým majetkem, ale zároveň partnera, který sleduje změny, hlídá detaily a přichází s řešeními. Proto využívají servisní poradenství, které jim poskytuje jistotu, klid a VIP klientský servis a dlouhodobá péče. 
 
     Ať už spravujete majetek do 1 milionu korun, nebo jste manažer či ředitel firmy s portfoliem v řádech milionů – mám pro vás řešení. </p>
