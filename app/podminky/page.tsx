@@ -20,7 +20,7 @@ const companies: Company[] = [
             { label: "IČO", value: "06752888" },
             { label: "Sídlo", value: "Nad Žlábkem 3758, 580 01 Havlíčkův Brod" },
             { label: "Spisová značka", value: "C 57025 vedená u Krajského soudu v Hradci Králové" },
-            { label: "Vznik", value: "18. června 2026" },
+            { label: "Vznik", value: "12. ledna 2026" },
         ],
     },
     {
