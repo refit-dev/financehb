@@ -65,12 +65,17 @@ export default function Footer() {
                         <Link target={"_blank"} href={"https://dobryporadce.cz/poradci/petr-krajcigr-efa"} className='underline underline-offset-2 decoration-secondary-background'>Dobrý poradce</Link>
                         <Link target={"_blank"} href={"https://www.drfg.cz/"} className='underline underline-offset-2 decoration-secondary-background'>www.drfg.cz</Link>
                         <Link target={"_blank"} href={"https://pkfinance.cz/"} className='underline underline-offset-2 decoration-secondary-background'>www.pkfinance.cz/</Link>
-                        <Link target={"_blank"} href={"/nemovitosti"} className='underline underline-offset-2 decoration-secondary-background'>Nemovitosti</Link>
-                        
+                        <Link target={"_blank"} href={"/nemovitosti"} className='underline underline-offset-2 decoration-secondary-background'>Nemovitosti</Link>       
                     </div>
                 </div>
                
-                <p className='text-center text-sm'>Finanční služby propagované a nabízené na tomto webu poskytuje společnost Financehb Services s.r.o, IČO: 29698022, se sídlem Nad Žlábkem 3758, 580 01 Havlíčkův Brod a zde uvedení poradci jako fyzické osoby: Petr Krajcigr, kteří jsou v oblasti… <Link target={"_blank"} href={"/podminky"} className='underline'> číst více</Link></p>
+                <p className='text-center text-sm'>
+                    Finanční služby propagované a nabízené na tomto webu poskytuje společnost Financehb s.r.o, a zde uvedení poradci jako fyzické osoby a vázaní zástupci: Petr Krajcigr. 
+                    Servisní poradenství poskytuje Financehb Services s.r.o, IČO: 29698022, se sídlem Nad Žlábkem 3758, 580 01 Havlíčkův Brod...
+                    <Link target={"_blank"} href={"/podminky"} className='underline'> 
+                        číst více
+                    </Link>
+                </p>
            
                </div>
             </footer>

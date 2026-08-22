@@ -81,7 +81,7 @@ export default function PodminkyPage() {
                         <span className="font-medium">spotřebitelských úvěrů</span> – jako vázaný zástupce samostatného zprostředkovatele podle zákona č. 257/2016 Sb., o spotřebitelském úvěru.
                     </li>
                     <li>
-                        <span className="font-medium">ivestic</span> – jako vázaný zástupce investičního zprostředkovatele podle zákona č. 256/2004 Sb., o podnikání na kapitálovém trhu,
+                        <span className="font-medium">investic</span> – jako vázaný zástupce investičního zprostředkovatele podle zákona č. 256/2004 Sb., o podnikání na kapitálovém trhu,
                     </li>
                 </ul>
                 
@@ -127,6 +127,55 @@ export default function PodminkyPage() {
                             </dl>
                         </article>
                     ))}
+                </div>
+            </section>
+            <section className="space-y-4">
+                <h2 className="text-xl font-medium">4. Servisní poradenství</h2>
+                <hr className="border-secondary border-[1.5px]" />
+               
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                   
+                        <article
+                            className="flex flex-col rounded-xl border border-secondary/15 bg-primary-foreground p-6 shadow-md"
+                        >
+                            <h3 className="text-xl font-medium">Financehb Services s.r.o.</h3>
+                            
+                            <dl className="mt-4 space-y-3 text-base font-light">
+                               
+                                    <div  className="flex flex-col">
+                                        <dt className="text-xs uppercase tracking-wider text-secondary/60">
+                                            Právní forma
+                                        </dt>
+                                        <dd>Společnost s ručením omezeným</dd>
+                                    </div>
+                                    <div  className="flex flex-col">
+                                        <dt className="text-xs uppercase tracking-wider text-secondary/60">
+                                            IČO
+                                        </dt>
+                                        <dd>29698022</dd>
+                                    </div>
+                                    <div  className="flex flex-col">
+                                        <dt className="text-xs uppercase tracking-wider text-secondary/60">
+                                            Sídlo
+                                        </dt>
+                                        <dd>Nad Žlábkem 3758, 580 01 Havlíčkův Brod</dd>
+                                    </div>
+                                    <div  className="flex flex-col">
+                                        <dt className="text-xs uppercase tracking-wider text-secondary/60">
+                                            Spisová značka
+                                        </dt>
+                                        <dd>C 57025/KSHK Krajský soud v Hradci Králové</dd>
+                                    </div>
+                                    <div  className="flex flex-col">
+                                        <dt className="text-xs uppercase tracking-wider text-secondary/60">
+                                            Vznik
+                                        </dt>
+                                        <dd>18. června 2026</dd>
+                                    </div>
+                                
+                            </dl>
+                        </article>
+                  
                 </div>
             </section>
         </main>
