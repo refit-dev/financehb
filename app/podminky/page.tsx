@@ -80,10 +80,11 @@ export default function PodminkyPage() {
                     <li>
                         <span className="font-medium">spotřebitelských úvěrů</span> – jako vázaný zástupce samostatného zprostředkovatele podle zákona č. 257/2016 Sb., o spotřebitelském úvěru.
                     </li>
+                    <li>
+                        <span className="font-medium">ivestic</span> – jako vázaný zástupce investičního zprostředkovatele podle zákona č. 256/2004 Sb., o podnikání na kapitálovém trhu,
+                    </li>
                 </ul>
-                {/*
-                investic – jako vázaný zástupce investičního zprostředkovatele podle zákona č. 256/2004 Sb., o podnikání na kapitálovém trhu,
-spotřebitelských úvěrů – jako vázaný zástupce samostatného zprostředkovatele podle zákona č. 257/2016 Sb., o spotřebitelském úvěru.*/}
+                
                 <p className="border-l-4 border-secondary-background bg-primary-foreground p-5 text-lg font-light leading-relaxed">
                     Tuto skutečnost je možné ověřit v Seznamu regulovaných a registrovaných subjektů finančního trhu
                     České národní banky na{" "}
