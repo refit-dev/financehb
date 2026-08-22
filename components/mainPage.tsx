@@ -72,7 +72,7 @@ export default  function MainPage(){
         <hr className="h-0.5 w-20 mt-4"/>
            <div className="flex flex-col text-white">
     <h3 className="text-xl font-bold">Zajištění pravidelného <span className="text-secondary-background">pasivního příjmu</span></h3>
-            <p className="font-extralight text-base ">Máte aktuálně větší obnos peněz a nechcete je nechat jen tak ležet v bance? Zajímá vás, jak to udělat, aby vám vaše peníze chytrou investicí přinášeli pravidelný pasivní příjem? Pomohu Vám zorientovat se v možnostech investování a zprostředkuji investiční produkty z nabídky spolupracujících poskytovatelů.</p>
+            <p className="font-extralight text-base ">Máte aktuálně větší obnos peněz a nechcete jej nechat pouze na bankovním účtu? Zajímá vás, jaké možnosti nabízí investování pro tvorbu dlouhodobého nebo pravidelného příjmu? Pomohu vám zorientovat se v možnostech investování a zprostředkuji investiční produkty z nabídky spolupracujících poskytovatelů.</p>
            </div>
        
           </div>
@@ -92,7 +92,7 @@ export default  function MainPage(){
         <hr className="h-0.5 w-20 mt-4"/>
            <div className="flex flex-col text-white">
     <h3 className="text-xl font-bold">Investice do <span className="text-secondary-background">podílových fondů</span> a <span className="text-secondary-background">ETF</span> aj. </h3>
-            <p className="font-extralight text-base ">Rozhodli jste se investovat do podílových fondů, ale nejste si v tomto oboru zcela jistí? Jsem zde pro vás, a díky tomu, že mám za sebou již řadu úspěšných investic, najdeme společně tu správnou cestu bez zbytečných komplikací.</p>
+            <p className="font-extralight text-base ">Rozhodli jste se investovat do podílových fondů nebo ETF, ale nejste si v této oblasti zcela jistí? Pomohu vám zorientovat se v možnostech a v rámci příslušného oprávnění vám mohu zprostředkovat investiční produkty.</p>
            </div>
        
           </div>
@@ -102,7 +102,7 @@ export default  function MainPage(){
         <hr className="h-0.5 w-20 mt-4"/>
            <div className="flex flex-col text-white">
     <h3 className="text-xl font-bold">Zajištění  <span className="text-secondary-background">majetku</span> a <span className="text-secondary-background">odpovědností</span> </h3>
-            <p className="font-extralight text-base ">Potřebujete poradit se správou majetku? Spolehněte se na mě, protože nevynechám ani sebemenší detail. Nemáte rádi nemilá překvapení? Já také ne, proto nejen při plánování zajištění majetku postupuju s nejvyšší důsledností.</p>
+            <p className="font-extralight text-base ">Potřebujete poradit se zajištěním svého majetku a odpovědnosti? Já také ne, proto nejen při plánování zajištění majetku postupuju s nejvyšší důsledností.</p>
            </div>
        
           </div>

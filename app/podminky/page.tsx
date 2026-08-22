@@ -9,14 +9,12 @@ export const metadata: Metadata = {
 
 type Company = {
     name: string
-    role: string
     rows: { label: string; value: string }[]
 }
 
 const companies: Company[] = [
     {
         name: "Financehb.cz s.r.o.",
-        role: "Poskytovatel servisního poradenství (placené služby webu)",
         rows: [
             { label: "Právní forma", value: "Společnost s ručením omezeným" },
             { label: "IČO", value: "06752888" },
@@ -27,7 +25,6 @@ const companies: Company[] = [
     },
     {
         name: "EFEKTA Brokerpool a.s.",
-        role: "Zastoupený subjekt – samostatný zprostředkovatel",
         rows: [
             { label: "Právní forma", value: "Akciová společnost" },
             { label: "IČO", value: "29048770" },
@@ -51,9 +48,9 @@ export default function PodminkyPage() {
             </header>
 
             <section className="space-y-4">
-                <h2 className="text-2xl font-medium">1. Kdo služby na tomto webu zprostředkovává</h2>
+                <h2 className="text-xl font-medium">1. Kdo služby na tomto webu zprostředkovává</h2>
                 <hr className="border-secondary border-[1.5px]" />
-                <p className="text-xl leading-relaxed">
+                <p className="text-lg leading-relaxed">
                     Finanční služby propagované a nabízené na tomto webu jsou v příslušném rozsahu zprostředkovávány
                     společností <strong className="font-medium">Financehb.cz s.r.o.</strong>, IČO 06752888,
                     a jejími oprávněnými pracovníky.
@@ -61,18 +58,18 @@ export default function PodminkyPage() {
             </section>
 
             <section className="space-y-4">
-                <h2 className="text-2xl font-medium">2. Rozsah regulované činnosti</h2>
+                <h2 className="text-xl font-medium">2. Rozsah regulované činnosti</h2>
                 <hr className="border-secondary border-[1.5px]" />
-                <p className="text-xl leading-relaxed">
+                <p className="text-lg leading-relaxed">
                     <strong className="font-medium">Petr Krajcigr</strong> vykonává regulovanou činnost jako vázaný
                     zástupce příslušného zastoupeného subjektu, zejména společnosti{" "}
                     <strong className="font-medium">EFEKTA Brokerpool a.s.</strong>, a to výhradně v rozsahu oprávnění
                     evidovaných Českou národní bankou.
                 </p>
-                <p className="text-xl leading-relaxed">
+                <p className="text-lg leading-relaxed">
                     Jedná se zejména o zprostředkování finančních produktů a služeb v oblasti:
                 </p>
-                <ul className="list-disc pl-6 space-y-3 text-lg font-light marker:text-secondary-background">
+                <ul className="list-disc pl-6 space-y-3 text-base font-light marker:text-secondary-background">
                     <li>
                         <span className="font-medium">pojištění</span> – jako vázaný zástupce samostatného
                         zprostředkovatele pojištění registrovaný podle zákona č. 170/2018 Sb.,
@@ -102,7 +99,7 @@ export default function PodminkyPage() {
             </section>
 
             <section className="space-y-4">
-                <h2 className="text-2xl font-medium">3. Údaje o společnostech</h2>
+                <h2 className="text-xl font-medium">3. Údaje o společnostech</h2>
                 <hr className="border-secondary border-[1.5px]" />
                 <p className="text-lg font-light">
                     Níže uvedené společnosti jsou samostatné právnické osoby s odlišnou rolí. Údaje se vztahují vždy
@@ -115,9 +112,7 @@ export default function PodminkyPage() {
                             className="flex flex-col rounded-xl border border-secondary/15 bg-primary-foreground p-6 shadow-md"
                         >
                             <h3 className="text-xl font-medium">{company.name}</h3>
-                            <p className="mt-2 border-t-2 border-secondary-background pt-3 text-sm font-light">
-                                {company.role}
-                            </p>
+                            
                             <dl className="mt-4 space-y-3 text-base font-light">
                                 {company.rows.map((row) => (
                                     <div key={row.label} className="flex flex-col">

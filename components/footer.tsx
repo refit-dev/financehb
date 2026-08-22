@@ -70,7 +70,7 @@ export default function Footer() {
                     </div>
                 </div>
                
-                <p className='text-center text-sm'>Finanční služby propagované a nabízené na tomto webu poskytuje společnost Financehb.cz s.r.o a zde uvedení poradci jako fyzické osoby: Petr Krajcigr, kteří jsou v oblasti… <Link target={"_blank"} href={"/podminky"} className='underline'> číst více</Link></p>
+                <p className='text-center text-sm'>Finanční služby propagované a nabízené na tomto webu poskytuje společnost Financehb Services s.r.o a zde uvedení poradci jako fyzické osoby: Petr Krajcigr, kteří jsou v oblasti… <Link target={"_blank"} href={"/podminky"} className='underline'> číst více</Link></p>
            
                </div>
             </footer>

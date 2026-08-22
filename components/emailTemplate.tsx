@@ -174,7 +174,7 @@ export default function EmailTemplate({ documentData, email }: EmailTemplateProp
 
           {/* Legal */}
           <Section style={{ fontSize: 11, color: "#999", marginTop: 20, paddingTop: 20, borderTop: "1px solid #eee" }}>
-            <Text>Finanční služby propagované a nabízené na tomto webu poskytuje společnost Financehb.cz s.r.o a zde uvedení poradci jako fyzické osoby: Petr Krajcigr, kteří jsou v oblasti:</Text>
+            <Text>Finanční služby propagované a nabízené na tomto webu poskytuje společnost Financehb Services s.r.o a zde uvedení poradci jako fyzické osoby: Petr Krajcigr, kteří jsou v oblasti:</Text>
             <Hr style={{ border: "1px solid #eee", margin: "10px 0" }} />
             <ul>
               <li>pojištění registrovaní podle zákona č. 170/2018 Sb. jako vázaní zástupci samostatného zprostředkovatele pojištění,</li>
