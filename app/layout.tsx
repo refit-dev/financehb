@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   applicationName: "Finance HB",
   generator: "Next.ts",
-  title: "Finance HB, správa investic a financí",
+  title: "Finance HB - finance, investice a finanční plánování",
   description: "V oboru financí pracuji od roku 1998 tedy více jak 27 let. Specializuji se na investice a rizika v osobních financích. Na mém webu najdete články, ebook, newsletter a můžete si předplatit obsah.",
   authors: [{name: "Adam Hitzger"}, {name: "Petr Krajcigr"}],
   keywords: [

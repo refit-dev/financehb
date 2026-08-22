@@ -19,7 +19,7 @@ const companies: Company[] = [
             { label: "Právní forma", value: "Společnost s ručením omezeným" },
             { label: "IČO", value: "06752888" },
             { label: "Sídlo", value: "Nad Žlábkem 3758, 580 01 Havlíčkův Brod" },
-            { label: "Spisová značka", value: "C 57025 vedená u Krajského soudu v Hradci Králové" },
+            { label: "Spisová značka", value: "	C 40975/KSHK Krajský soud v Hradci Králové" },
             { label: "Vznik", value: "12. ledna 2018" },
         ],
     },
@@ -74,14 +74,14 @@ export default function PodminkyPage() {
                         <span className="font-medium">pojištění</span> – jako vázaný zástupce samostatného zprostředkovatele podle zákona č. 170/2018 Sb., o distribuci pojištění a zajištění,
                     </li>
                     <li>
-                        <span className="font-medium">doplňkového penzijního spoření</span> – jako vázaný zástupce oprávněný k nabízení a zprostředkování doplňkového penzijního spoření podle zákona č. 427/2011 Sb., o doplňkovém penzijním spoření,
+                        <span className="font-medium">doplňkového penzijního spoření</span> - jako vázaný zástupce v rozsahu oprávnění podle zákona č. 427/2011 Sb., o doplňkovém penzijním spoření,
 
                     </li>
                     <li>
-                        <span className="font-medium">spotřebitelských úvěrů</span> – jako vázaný zástupce samostatného zprostředkovatele podle zákona č. 257/2016 Sb., o spotřebitelském úvěru.
+                        <span className="font-medium">spotřebitelských úvěrů</span> – jako vázaný zástupce samostatného zprostředkovatele podle zákona č. 257/2016 Sb., o spotřebitelském úvěru,
                     </li>
                     <li>
-                        <span className="font-medium">investic</span> – jako vázaný zástupce investičního zprostředkovatele podle zákona č. 256/2004 Sb., o podnikání na kapitálovém trhu,
+                        <span className="font-medium">investic</span> – jako vázaný zástupce investičního zprostředkovatele podle zákona č. 256/2004 Sb., o podnikání na kapitálovém trhu.
                     </li>
                 </ul>
                 

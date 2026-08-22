@@ -349,7 +349,7 @@ const services = [
       <header className="mb-12 text-center">
         <h1 className="text-3xl md:text-4xl font-bold mb-4">Popis služeb</h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Kompletní přehled finančních služeb a poradenství pro naše klienty
+          Kompletní přehled služeb servisního poradenství pro naše klienty
         </p>
       </header>
 
