@@ -71,18 +71,19 @@ export default function PodminkyPage() {
                 </p>
                 <ul className="list-disc pl-6 space-y-3 text-base font-light marker:text-secondary-background">
                     <li>
-                        <span className="font-medium">pojištění</span> – jako vázaný zástupce samostatného
-                        zprostředkovatele pojištění registrovaný podle zákona č. 170/2018 Sb.,
+                        <span className="font-medium">pojištění</span> – jako vázaný zástupce samostatného zprostředkovatele podle zákona č. 170/2018 Sb., o distribuci pojištění a zajištění,
                     </li>
                     <li>
-                        <span className="font-medium">doplňkového penzijního spoření</span> – jako vázaný zástupce
-                        investičního zprostředkovatele podle zákona č. 256/2004 Sb.,
+                        <span className="font-medium">doplňkového penzijního spoření</span> – jako vázaný zástupce oprávněný k nabízení a zprostředkování doplňkového penzijního spoření podle zákona č. 427/2011 Sb., o doplňkovém penzijním spoření,
+
                     </li>
                     <li>
-                        <span className="font-medium">spotřebitelských úvěrů</span> – jako vázaný zástupce samostatného
-                        zprostředkovatele spotřebitelského úvěru podle zákona č. 257/2016 Sb.
+                        <span className="font-medium">spotřebitelských úvěrů</span> – jako vázaný zástupce samostatného zprostředkovatele podle zákona č. 257/2016 Sb., o spotřebitelském úvěru.
                     </li>
                 </ul>
+                {/*
+                investic – jako vázaný zástupce investičního zprostředkovatele podle zákona č. 256/2004 Sb., o podnikání na kapitálovém trhu,
+spotřebitelských úvěrů – jako vázaný zástupce samostatného zprostředkovatele podle zákona č. 257/2016 Sb., o spotřebitelském úvěru.*/}
                 <p className="border-l-4 border-secondary-background bg-primary-foreground p-5 text-lg font-light leading-relaxed">
                     Tuto skutečnost je možné ověřit v Seznamu regulovaných a registrovaných subjektů finančního trhu
                     České národní banky na{" "}
