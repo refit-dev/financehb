@@ -108,7 +108,7 @@ const services = [
   {
     link:"admin",
     title: "Komplexní zpracování administrativy",
-    description: "Poskytovatel poskytuje Odběrateli administrativní činnosti související s jeho majetkem; např. získání příslušných formulářů a podkladů k vyplnění Odběratelem, administrativní zpracování a zaslání potřebných dokumentů na jednotlivé instituce a zároveň vedení evidence odeslané dokumentace pro případné reklamace ve vztahu k institucím. U spotřebitelských úvěrů má Odběratel právo na bezplatné zpracování administrativy související s těmi spotřebitelskými úvěry, u kterých Poskytovatel obdržel odměnu přímo od jejich poskytovatelů."
+    description: "Poskytovatel poskytuje Odběrateli administrativní činnosti související s jeho majetkem; např. získání příslušných formulářů a podkladů k vyplnění Odběratelem, administrativní zpracování a zaslání potřebných dokumentů na jednotlivé instituce a zároveň vedení evidence odeslané dokumentace pro případné reklamace ve vztahu k institucím. "
   },
   {
     link:"krizPlan",
@@ -178,7 +178,7 @@ const services = [
     }
 ];
   const plans = [
-    { name: "Standart se slevou", price: "300 Kč", yrlPrice:  "3300 Kč"},
+    { name: "Standard se slevou", price: "300 Kč", yrlPrice:  "3300 Kč"},
     { name: "Standard", price: "499 Kč", yrlPrice:  "6500 Kč" },
     { name: "Premium", price: "890 Kč", yrlPrice:  "10900 Kč" },
   ]
@@ -206,7 +206,7 @@ const services = [
     { name: "Archivace produktové dokumentace", info: "doc",basic: false, pro: true, enterprise: true },
     { name: "Konzultace s realitními odborníky", info: "konzultace",basic: false, pro: false, enterprise: true },
     { name: "Pomoc v oblasti investičních nemovitostí", info: "pomoc",basic: false, pro: false, enterprise: true },
-    { name: "Audit socialního zapezpečení", info: "audit",basic: false, pro: false, enterprise: true },
+    { name: "Audit socialního zabezpečení", info: "audit",basic: false, pro: false, enterprise: true },
     { name: "Webinář a Workshopy ", info: "webWor",basic: false, pro: false, enterprise: true },
     { name: "Služby optimalizace výdajů domácnosti", info: "domacnosti",basic: true, pro: true, enterprise: true },
     { name: "Asistence při řešení pojistných údálostí", info: "asis",basic: false, pro: false, enterprise: true },

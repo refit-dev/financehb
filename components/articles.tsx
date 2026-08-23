@@ -64,8 +64,8 @@ export function HomeArticles({ articles }: { articles: Sanity[]}) {
         <div ref={sec} className="grid md:grid-cols-3 w-full gap-4">
             {articles &&
                 articles.map((a: Sanity, idx: number) => (
-                    <motion.a
-                    href={`/clanky/${a.slug}`}
+                    <motion.div
+                    
                     key={idx} 
                     className="w-full space-y-3 flex  flex-col  bg-white/10 rounded-2xl text-base lg:text-lg"
                     initial={{opacity:0, x: -250}}
@@ -73,18 +73,24 @@ export function HomeArticles({ articles }: { articles: Sanity[]}) {
                     exit={{opacity: 0, x: -250}}
                     transition={{duration: 0.8*(idx+1)}}
                     >
+                        <Link
+                        href={`/clanky/${a.slug}`}
+                        >
+
+                        
                         <Image src={a.picture} alt={a.overview} width={600} height={500}/>
+                        </Link>
                         <div className="w-full space-y-4 font-light flex text-[1.05rem] flex-col px-2">
                         <span className="text-left text-xl">
                             {a.datum} / {a.name}
                         </span>
                     
                             <PortableText value={a.overview} components={components}/>
-</div>
+                        </div>
                          <Button variant={"default"}  className="mx-auto">
                             Celý článek
                             </Button>
-                    </motion.a>
+                    </motion.div>
                 ))}
         </div>
         <Link href={"/clanky"} className=" mx-auto"><Button size={"sm"} className="justify-between mx-auto">Starší články</Button></Link>
