@@ -142,7 +142,7 @@ const services = [
   },
   {
     link:"webWor",
-    title: "Webináře a Workshopy",
+    title: "Webináře a workshopy",
     description: "Odběratel má právo zúčastnit se 1x ročně webináře nebo workshopu nabízeného v seznamu vzdělávacích akcí aktuálně pořádaných Poskytovatelem a s ním spolupracujícími subjekty, a to dle vlastního výběru Odběratele. Webináře a workshopy se zaměřují na řadu rozmanitých témat ze světa financí, finančního trhu a sebevzdělávání v oblasti finanční gramotnosti a vlastní správy financí."
   },
   {
@@ -186,7 +186,7 @@ const services = [
   const features = [
     { name: "garance EUCS",info: "eucs", basic: false, pro: true, enterprise: true },
     { name: "Aktualizace finančního plánu 1 ročně", info: "akt",basic: false, pro: false, enterprise: true },
-    { name: "Aktualizace finančního plánu 1x za 24 měšíců", info: "aktualizace",basic: true, pro: true, enterprise: false },
+    { name: "Aktualizace finančního plánu 1× za 24 měsíců", info: "aktualizace",basic: true, pro: true, enterprise: false },
     { name: "Aktualizace finančního plánu", info: "finakt",basic: false, pro: true, enterprise: false },
     { name: "Aktualizace finančního plánu dle potřeby", info: "dlePotreby",basic: false, pro: false, enterprise: true },
     { name: "Přehled změn finančního majetku", info: "finmat",basic: false, pro: true, enterprise: true },
@@ -206,10 +206,10 @@ const services = [
     { name: "Archivace produktové dokumentace", info: "doc",basic: false, pro: true, enterprise: true },
     { name: "Konzultace s realitními odborníky", info: "konzultace",basic: false, pro: false, enterprise: true },
     { name: "Pomoc v oblasti investičních nemovitostí", info: "pomoc",basic: false, pro: false, enterprise: true },
-    { name: "Audit socialního zabezpečení", info: "audit",basic: false, pro: false, enterprise: true },
-    { name: "Webinář a Workshopy ", info: "webWor",basic: false, pro: false, enterprise: true },
+    { name: "Audit sociálního zabezpečení", info: "audit",basic: false, pro: false, enterprise: true },
+    { name: "Webináře a workshopy ", info: "webWor",basic: false, pro: false, enterprise: true },
     { name: "Služby optimalizace výdajů domácnosti", info: "domacnosti",basic: true, pro: true, enterprise: true },
-    { name: "Asistence při řešení pojistných údálostí", info: "asis",basic: false, pro: false, enterprise: true },
+    { name: "Asistence při řešení pojistných událostí", info: "asis",basic: false, pro: false, enterprise: true },
   ]
 
     
@@ -271,7 +271,7 @@ const services = [
     <h3 
     className=" font-ibarra md:text-left font-bold tracking-wide  text-xl">🧩 Co získáte díky servisnímu poradenství? </h3>
     <ul className="list-disc mx-5 space-y-1">
-      <li><span className="font-bold">Pravidelnou péči a kontrolu nad majetkem </span>– minimálně jednou ročně projdeme aktuální hodnotu a úpravy plánu </li>
+      <li><span className="font-bold">Pravidelný přehled o majetku</span>– minimálně jednou ročně projdeme aktuální hodnoty a aktualizujeme podklady finančního plánu </li>
       <li><span className="font-bold">Aktualizaci finančního plánu a konzultace zdarma</span></li> 
 
       <li><span className="font-bold">Měsíční aktuality z trhu</span> a přehled novinek bez složitého hledání</li> 
