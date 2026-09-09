@@ -129,6 +129,7 @@ export default function PodminkyPage() {
                     ))}
                 </div>
             </section>
+            {/**
             <section className="space-y-4">
                 <h2 className="text-xl font-medium">4. Servisní poradenství</h2>
                 <hr className="border-secondary border-[1.5px]" />
@@ -178,6 +179,7 @@ export default function PodminkyPage() {
                   
                 </div>
             </section>
+             */}
         </main>
     )
 }

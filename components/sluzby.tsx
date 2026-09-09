@@ -257,7 +257,9 @@ const services = [
       </motion.section> 
 
   ))}
+  
     <div ref={text} className="bg-primary min-h-screen flex flex-col justify-center p-4 space-y-5" id="cenik">
+      {/*
     <h2 
     className="underline underline-offset-4 decoration-secondary-background font-ibarra md:text-left font-bold tracking-wide  text-4xl ">Servisní poradenství</h2>
     <h3 
@@ -292,10 +294,10 @@ const services = [
       <li><span className="font-bold">VIP servis</span> – pro ty, kteří chtějí plný komfort, individuální přístup a maximální efektivitu </li>    
     </ul>
          <p>👉 Získejte dlouhodobý přehled o svých financích a profesionální klientský servis. Staňte se klientem s profesionální péčí, která šetří čas, peníze i starosti. 
-
+ 
  
 <br/>
-<span className="font-bold">Pokud vás tato nabídka zaujala, neváhejte se ozvat – rád vám vše osobně představím.</span></p>  
+<span className="font-bold">Pokud vás tato nabídka zaujala, neváhejte se ozvat – rád vám vše osobně představím.</span></p> */} 
       <div className="w-full max-w-6xl mx-auto items-center bg-secondary text-primary rounded-lg overflow-y-visible">
         <div className="grid grid-cols-4 gap-4 p-6 items-end">
           <div className="text-left font-bold">Tarif</div>

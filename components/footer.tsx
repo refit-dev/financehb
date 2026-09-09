@@ -71,7 +71,7 @@ export default function Footer() {
                
                 <p className='text-center text-sm'>
                     Finanční služby propagované a nabízené na tomto webu jsou v příslušném rozsahu zprostředkovávány společností Financehb.cz s.r.o a zde uvedenými oprávněnými osobami jako fyzické osoby a vázaní zástupci: Petr Krajcigr. 
-                    Servisní poradenství poskytuje Financehb Services s.r.o, IČO: 29698022, se sídlem Nad Žlábkem 3758, 580 01 Havlíčkův Brod...
+                    {/**Servisní poradenství poskytuje Financehb Services s.r.o, IČO: 29698022, se sídlem Nad Žlábkem 3758, 580 01 Havlíčkův Brod */}...
                     <Link target={"_blank"} href={"/podminky"} className='underline'> 
                         číst více
                     </Link>
