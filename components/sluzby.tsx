@@ -258,8 +258,8 @@ const services = [
 
   ))}
   
-    <div ref={text} className="bg-primary min-h-screen flex flex-col justify-center p-4 space-y-5" id="cenik">
-      {/*
+   {/* <div ref={text} className="bg-primary min-h-screen flex flex-col justify-center p-4 space-y-5" id="cenik">
+      
     <h2 
     className="underline underline-offset-4 decoration-secondary-background font-ibarra md:text-left font-bold tracking-wide  text-4xl ">Servisní poradenství</h2>
     <h3 
@@ -297,7 +297,7 @@ const services = [
  
  
 <br/>
-<span className="font-bold">Pokud vás tato nabídka zaujala, neváhejte se ozvat – rád vám vše osobně představím.</span></p> */} 
+<span className="font-bold">Pokud vás tato nabídka zaujala, neváhejte se ozvat – rád vám vše osobně představím.</span></p>  
       <div className="w-full max-w-6xl mx-auto items-center bg-secondary text-primary rounded-lg overflow-y-visible">
         <div className="grid grid-cols-4 gap-4 p-6 items-end">
           <div className="text-left font-bold">Tarif</div>
@@ -364,7 +364,7 @@ const services = [
         ))}
       </main>
     </div>
-         
+         */}
           <CalendlyPop />
           <section className="flex flex-col w-full p-8 space-y-8 bg-primary-foreground" id="contact">
             <h2 className="underline decoration-secondary-background underline-offset-4 font-ibarra font-bold tracking-wide  text-4xl lg:text-5xl">Kontaktujte mě</h2>
