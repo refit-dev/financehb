@@ -7,6 +7,33 @@ import { createTransport } from "nodemailer";
 import { turso } from "@/database/client";
 import { saveSmartmailing } from "@/actions/mail";
 
+type PeriodItem = { price?: { id?: string } | null };
+type PeriodField = 'current_period_start' | 'current_period_end';
+type PlanItem = (items: PeriodItem[]) => PeriodItem | undefined;
+
+// Typed like the removed field, which was also absent at runtime when Stripe omitted it.
+function subscriptionPeriod(subscription: object, field: PeriodField, planItem?: PlanItem): number {
+  const legacy: unknown = Reflect.get(subscription, field);
+  if (typeof legacy === 'number') return legacy;
+  const list: unknown = Reflect.get(subscription, 'items');
+  const data: unknown = list && typeof list === 'object' ? Reflect.get(list, 'data') : undefined;
+  const items = (Array.isArray(data) ? data : []).filter(
+    (item): item is PeriodItem => typeof item === 'object' && item !== null,
+  );
+  const periods = new Set(items.map((item) => Reflect.get(item, field)));
+  const chosen = periods.size === 1 ? items[0] : planItem?.(items);
+  const value: unknown = chosen ? Reflect.get(chosen, field) : undefined;
+  return (typeof value === 'number' ? value : undefined) as number;
+}
+
+function getSubscriptionPeriodStart(subscription: object, planItem?: PlanItem): number {
+  return subscriptionPeriod(subscription, 'current_period_start', planItem);
+}
+
+function getSubscriptionPeriodEnd(subscription: object, planItem?: PlanItem): number {
+  return subscriptionPeriod(subscription, 'current_period_end', planItem);
+}
+
 export async function POST(req: Request) {
   const body = await req.text();
   const raynetAPIUrl = "https://app.raynet.cz/api/v2/company/";
@@ -196,8 +223,8 @@ export async function POST(req: Request) {
             args: [
               user.id,
               subscription.id as string,
-              subscription.current_period_start as number,
-              subscription.current_period_end as number,
+              (getSubscriptionPeriodStart(subscription, (items) => items[0])) as number,
+              (getSubscriptionPeriodEnd(subscription, (items) => items[0])) as number,
               subscription.status,
               subscription.items.data[0].plan.interval as string,
               subscription.items.data[0].plan.id as string,
@@ -237,8 +264,8 @@ export async function POST(req: Request) {
                         WHERE user_id = ?`,
               args: [
                 sub.id as string,
-                sub.current_period_start as number,
-                sub.current_period_end as number,
+                (getSubscriptionPeriodStart(sub, (items) => items[0])) as number,
+                (getSubscriptionPeriodEnd(sub, (items) => items[0])) as number,
                 sub.status,
                 sub.items.data[0].plan.interval as string,
                 sub.items.data[0].plan.id as string,
