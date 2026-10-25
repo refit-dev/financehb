@@ -838,7 +838,7 @@ export async function createPayment(formData: FormData){
       customer: customerStripeId as string,
       mode: "subscription",
       billing_address_collection: "auto",
-      payment_method_types: ["card"],
+      allowed_payment_method_types: ["card"],
       allow_promotion_codes: true,
       line_items: [{ price: stripeId, quantity: 1 }],
       customer_update: {
